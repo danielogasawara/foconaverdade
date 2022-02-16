@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+:root {
+    --cor-principal: #003748;
+    --cor-branco: #fff;
+
+}
+/* body {
+
+} */
+#barraNavegação {
+    background-color: var(--cor-principal);
+}
