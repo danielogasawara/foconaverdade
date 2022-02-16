@@ -2,12 +2,15 @@
 
 :root {
     --cor-principal: #003748;
-    --cor-branco: #fff;
-
+    --cor-texto: #fff;
 }
-/* body {
-
-} */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--cor-texto)
+}
+nav > div a {
+    color: var(--cor-texto);
+}
 #barraNavegação {
-    background-color: var(--cor-principal);
+   background-color: var(--cor-principal);
 }
