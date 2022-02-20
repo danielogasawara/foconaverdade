@@ -23,6 +23,18 @@ nav#navBar div a {
 /* Conteúdo Principal */
 main > div:first-child {
     width: 100%;
-    height: 500px;
+    height: 200px;
     background-color: white;
+}
+/* Barra de pesquisa (PC)[Dropdown] */
+#barraDePesquisa {
+    
+}
+
+/*footer}*/
+footer{
+    padding:20px;
+    background: rgb(21,4,98);
+color: white;
+margin-top:20px;
 }
