@@ -15,47 +15,51 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <!-- CSS do Site -->
-    <link rel="stylesheet" media="screen and (min-width: 900px)" href="css/tamanhogrande.css">
-    <link rel="stylesheet" media="screen and (min-width: 600px)" href="css/tamanhomedio.css">
+    <link rel="stylesheet" href="css/csspadrao.css">
 </head>
 
 <body>
-    <div class="conteudo">
-        <header>
-            <div id="caixa-cabecario">
-                <nav>
-                    <a id="logo" href="index.html"><i class="fa-brands fa-dev fa-xl"></i> Foco na Verdade</a>
-                    <ul class="lista-links-nav">
-                        <li><a href="index.html">Inicío</a></li>
-                        <li><a href="#">Categorias</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                    </ul>
-                    <span id="botaoPesquisar"><i class="fa-solid fa-magnifying-glass"></i></span>
-                </nav>
+    <header>
+        <div id="caixa-cabecario">
+            <a id="logo" href="index.html"><i class="fa-brands fa-dev fa-xl"></i> Foco na Verdade</a>
+            <nav>
+                <ul class="lista-links-nav">
+                    <li><a href="index.html">Inicío</a></li>
+                    <li><a href="#">Categorias</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                </ul>
+            </nav>
+            <span id="botaoPesquisar"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <button id="botaoMenuMobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div id="caixa-pesquisa">
+            <form action="">
+                <input type="search" name="buscar" id="buscar" placeholder=" Pesquise aqui...">
+                <input type="submit" value="Buscar">
+            </form>
+        </div>
+    </header>
+    <main>
+        <div id="conteudo-principal">
+            <div id="caixa-destaques">
             </div>
-            <div id="caixa-pesquisa">
-                <form action="">
-                    <input type="search" name="buscar" id="buscar" placeholder=" Pesquise aqui...">
-                    <input type="submit" value="Buscar">
-                </form>
+            <div id="posts-recentes">
             </div>
-        </header>
-        <main>
-            <div id="conteudo-principal">
-                <div id="caixa-destaques">
-                </div>
-                <div id="posts-recentes">
-                </div>
-                <div id="todos-posts">
-                </div>
+            <div id="todos-posts">
             </div>
-        </main>
-        <footer>
-            <div id="caixa-rodape">
+        </div>
+    </main>
+    <footer>
+        <div id="rodape">
+            <div id="caixa-rodape-1">
                 <div id="caixa-contato">
                     <dl>
                         <dt>Contato:</dt>
-                        <dd>contatto@foconaverdade.com</dd>
+                        <dd>contato@foconaverdade.com</dd>
                     </dl>
                 </div>
                 <div id="caixa-links-rodape">
@@ -64,20 +68,19 @@
                     <a href="sobre.html">Sobre</a>
                 </div>
                 <div id="caixa-social">
-                    <!-- Facebook -->
-                    <i class="fa-brands fa-facebook"></i>
-                    <!-- Telegram-->
-                    <i class="fa-brands fa-telegram"></i>
-                    <!-- Instagram -->
-                    <i class="fa-brands fa-instagram"></i>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 </div>
-                <span id="divisoria-rodape"></span>
+            </div>
+            <hr>
+            <div id="caixa-rodape-2">
                 <span id="copyright">&copy; 2022 Foco na Verdade</span>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
     <!-- Javascript do Site -->
-    <script src="js/dropdown.js"></script>
+    <script src="js/javascript.js"></script>
 </body>
 
 </html>
