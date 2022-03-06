@@ -11,13 +11,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS do Site -->
     <link rel="stylesheet" href="assets/css/estilo.css">
+    <!-- CSS 830px -->
+    <link rel="stylesheet" media="(max-width: 830px)" href="assets/css/responsividade.css">
 </head>
 <body>
     <header>
         <div class="container">
             <img src="assets/img/logo-temp.png" alt="Logo da Foco na Verdade">
             <div class="menu-section">
+                <div class="menu-mobile">
+                    <div class="botao-menu-mobile">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
                 <nav>
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
@@ -35,26 +45,39 @@
                 <input type="submit" value="PESQUISAR">
             </div>
         </div>
+        <div class="container-menu-mobile">
+            <div class="box-menu-mobile">
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house-chimney"></i>Inicio</a></li>
+                    <li><a href="sobre.html"><i class="fa-solid fa-circle-info"></i>Sobre</a></li>
+                </ul>
+                <form action="" method="get">
+                    <input type="search" name="buscar" id="search-input" placeholder="Pesquise aqui...">
+                    <input type="submit" value="PESQUISAR">
+                </form>
+            </div>
+        </div>
     </header>
     <main>
         <div class="container-main-sobre">
             <div class="box-main-sobre">
+                <h1>Sobre</h1>
                 <div class="info-sobre-1">
                     <div class="textos-info-sobre">
-                        <h1>Acabando com as suas duvidas</h1>
+                        <h2>Acabando com as suas duvidas</h2>
                         <p>Sabemos o quão frustrante é receber uma notícia e depois descobrir que tudo não passava de uma mentira ou um golpe. Foi pensando nisso que desenvolvermos uma solução!</p>
                     </div>
                     <img src="assets/img/sobreimg1.svg" alt="Ilustração de uma confirmação.">
                 </div>
                 <div class="info-sobre-2">
+                    <img src="assets/img/sobreimg2.svg" alt="Ilustração de construção de site.">
                     <div class="textos-info-sobre">
-                        <h1>Tudo com apenas um click</h1>
+                        <h2>Tudo com apenas um click</h2>
                         <p>Criamos um site simples e direto onde em apenas alguns segundos te mantem informado sobre as mensagens e noticias que são divulgadas pela internet.</p>
                     </div>
-                    <img src="assets/img/sobreimg2.svg" alt="Ilustração de construção de site.">
                 </div>
                 <div class="info-sobre-3">
-                    <h1>Equipe do Site</h1>
+                    <h3>Equipe do Site</h3>
                     <div class="equipe-sobre">
                         <ul>
                             <li>
@@ -100,6 +123,7 @@
             <span>&copy; 2022 Foco na Verdade</span>
         </div>
     </footer>
+    <script src="assets/js/mobile.js"></script>
     <script src="assets/js/pesquisa.js"></script>
 </body>
 </html>

@@ -11,13 +11,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS do Site -->
     <link rel="stylesheet" href="assets/css/estilo.css">
+    <!-- CSS 830px -->
+    <link rel="stylesheet" media="(max-width: 830px)" href="assets/css/responsividade.css">
 </head>
 <body>
     <header>
         <div class="container">
             <img src="assets/img/logo-temp.png" alt="Logo da Foco na Verdade">
             <div class="menu-section">
+                <div class="menu-mobile">
+                    <div class="botao-menu-mobile">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
                 <nav>
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
@@ -33,6 +43,18 @@
             <div class="box-searchbar">
                 <input type="search" name="buscar" id="search-input" placeholder="Pesquique aqui...">
                 <input type="submit" value="PESQUISAR">
+            </div>
+        </div>
+        <div class="container-menu-mobile">
+            <div class="box-menu-mobile">
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house-chimney"></i>Inicio</a></li>
+                    <li><a href="sobre.html"><i class="fa-solid fa-circle-info"></i>Sobre</a></li>
+                </ul>
+                <form action="" method="get">
+                    <input type="search" name="buscar" id="search-input" placeholder="Pesquise aqui...">
+                    <input type="submit" value="PESQUISAR">
+                </form>
             </div>
         </div>
     </header>
@@ -194,6 +216,7 @@
             <span>&copy; 2022 Foco na Verdade</span>
         </div>
     </footer>
+    <script src="assets/js/mobile.js"></script>
     <script src="assets/js/pesquisa.js"></script>
 </body>
 </html>

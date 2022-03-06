@@ -1,3 +1,79 @@
 html {
     font-size: 50%;
 }
+/*
+=================
+    Cabeçario
+=================
+*/
+header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+header .container .menu-section nav,
+header .container .search-button {
+    display: none;
+}
+header .container .menu-section .menu-mobile {
+    display: block;
+}
+header .container-menu-mobile {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+/* 
+=========================
+    Rodapé da Página
+=========================
+*/
+footer .footer-first-section {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+}
+footer .footer-links {
+    flex-wrap: wrap;
+}
+footer dl {
+    display: none;
+}
+/* 
+==============================
+    Configuração de Tela
+           (650px)
+==============================
+*/
+@media screen and (max-width: 650px) {
+/* 
+=========================
+    Corpo da Página
+        (Sobre)
+=========================
+*/
+main .info-sobre-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+}
+main .info-sobre-2 {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 30px;
+}
+main .info-sobre-1 h2,
+main .info-sobre-2 h2 {
+    text-align: center;
+}
+main .info-sobre-1 p,
+main .info-sobre-2 p {
+    text-align: justify;
+}
+}
