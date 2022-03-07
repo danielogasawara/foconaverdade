@@ -7,9 +7,12 @@ html {
 =================
 */
 header {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
+}
+header .container-menu-mobile.ativo {
+    display: block;
+    border-radius: 0 0 10px 10px;
 }
 header .container .menu-section nav,
 header .container .search-button {
