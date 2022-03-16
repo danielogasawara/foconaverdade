@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foco na Verdade</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <!-- Icons FontAwesome -->
     <script src="https://kit.fontawesome.com/ea5c489a72.js" crossorigin="anonymous" defer></script>
     <!-- CSS do Site -->
     <link rel="stylesheet" href="assets/css/estilo.css">
     <!-- CSS da Responsividade -->
-    <link rel="stylesheet" media="(max-width: 830px)" href="assets/css/responsividade.css">
+    <link rel="stylesheet" media="(max-width: 1030px)" href="assets/css/responsividade.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <img src="assets/img/logo-temp.png" alt="Logo da Foco na Verdade">
+            <a href="index.html"><img src="assets/img/logo-do-site.svg" alt="" width="40px" loading="lazy"></a>
             <div class="menu-section">
                 <div class="menu-mobile">
                     <div class="botao-menu-mobile">
@@ -37,8 +38,10 @@
         </div>
         <div class="container-searchbar">
             <div class="box-searchbar">
-                <input type="search" name="buscar" id="search-input-pc" placeholder="Pesquique aqui...">
-                <input type="submit" value="PESQUISAR">
+                <form action="pesquisa.php" method="post">
+                    <input type="search" name="buscar" id="search-input-pc" placeholder="Pesquique aqui...">
+                    <input type="submit" value="PESQUISAR">
+                </form>
             </div>
         </div>
         <div class="container-menu-mobile">
@@ -47,7 +50,7 @@
                     <li><a href="index.html"><i class="fa-solid fa-house-chimney"></i>Inicio</a></li>
                     <li><a href="sobre.html"><i class="fa-solid fa-circle-info"></i>Sobre</a></li>
                 </ul>
-                <form action="" method="get">
+                <form action="pesquisa.php" method="post">
                     <input type="search" name="buscar" id="search-input-mobile" placeholder="Pesquise aqui...">
                     <input type="submit" value="PESQUISAR">
                 </form>
@@ -55,8 +58,164 @@
         </div>
     </header>
     <main>
-        <div class="container">
-
+        <div class="container-main">
+            <div class="box-main">
+                <section id="section-googleads-top">
+                    <div class="container-googleads-top-1">
+                        <span></span>
+                    </div> 
+                    <div class="container-googleads-top-2"> 
+                        <span></span>
+                        <span></span>     
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="container-googleads-top-3">
+                        <span></span>
+                    </div>
+                </section>
+                <h1><i class="fa-solid fa-fire"></i> Assuntos em Destaque</h1>
+                <section id="section-featured-posts">
+                    <div class="post-item">
+                        <article>
+                            <a href="posts/nova-variante-de-covid-como-cientistas-brasileiros.html">
+                                <img src="assets/img/thumb_posts/post1.webp" alt="Imagem ilustrando o vírus." loading="lazy">
+                                <h1>Como cientistas brasileiros detectam nova variante BA.2 no país</h1>
+                            </a>
+                                <span class="cat-saude">Saúde</span>
+                        </article>
+                    </div>
+                    <div class="post-item">
+                        <article>
+                            <a href="posts/como-telegram-pode-deixar-tse-em-sinuca-de-bico-nas-eleicoes.html">
+                                <img src="assets/img/thumb_posts/post2.webp" alt="Imagem mostrando o telegram." loading="lazy">
+                                <span class="cat-politica">Política</span>
+                                <h1>Como Telegram pode deixar TSE em 'sinuca de bico' nas eleições</h1>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="post-item">
+                        <article>
+                            <a href="posts/a_misteriosa-doenca-que-pode-ter-gerado-comportamentos-estranhos-das-bruxas-de-salem.html">
+                                <img src="assets/img/thumb_posts/post3.webp" alt="Imagem ilustrando uma bruxa." loading="lazy">
+                                <h1>A misteriosa doença que pode ter gerado comportamentos estranhos das 'Bruxas de Salém'</h1>
+                            </a>
+                            <span class="cat-mundo">Mundo</span>
+                        </article>
+                    </div>
+                    <div class="post-item">
+                        <article>
+                            <a href="#">
+                                <img src="assets/img/thumb_posts/post4.webp" alt="" loading="lazy">
+                                <h1>A cidade no deserto que luta para não ser engolida pela areia</h1>
+                            </a>
+                            <span class="cat-mundo">Mundo</span>
+                        </article>
+                    </div>
+                    <div class="post-item">
+                        <article>
+                            <a href="#">
+                                <img src="assets/img/thumb_posts/post5.webp" alt="" loading="lazy">
+                                <h1>Por que comunicação em tempo real não é possível entre a Terra e outros planetas</h1>
+                            </a>
+                            <span class="cat-tecnologia">Tecnologia</span>
+                        </article>
+                    </div>
+                    <div class="post-item">
+                        <article>
+                            <a href="#">
+                                <img src="assets/img/thumb_posts/post6.webp" alt="" loading="lazy">
+                            </a>
+                            <h1>Maior apreensão de bitcoins roubados recupera R$ 26 bilhões em criptomoeda</h1>
+                            <span class="cat-tecnologia">Tecnologia</span>
+                        </article>
+                    </div>
+                </section>
+                <section id="main-page-metrics">
+                    <div class="main-page-metric-1">
+                        <i class="fa-solid fa-star"></i>
+                        <h1>Assuntos do Momento</h1>
+                        <span class="page-metrics-divisor"></span>
+                        <ol>
+                            <li><span>1 </span>Como cientistas brasileiros detectam nova variante BA.2 no país.</li>
+                            <li><span>2 </span>Como Telegram pode deixar TSE em 'sinuca de bico' nas eleições.</li>
+                            <li><span>3 </span>Maior apreensão de bitcoins roubados recupera R$ 26 bilhões em criptomoeda</li>
+                        </ol>
+                    </div>
+                    <span></span>
+                    <div class="main-page-metric-2">
+                        <i class="fa-solid fa-tags"></i>
+                        <h1>Categorias</h1>
+                        <span class="page-metrics-divisor"></span>
+                        <div class="container-category-posts">
+                            <span class="category-posts-span category-saude">Saúde</span>
+                            <span class="category-posts-span category-mundo">Mundo</span>
+                            <span class="category-posts-span category-tecnologia">Tecnologia</span>
+                        </div>
+                    </div>
+                    <span></span>
+                    <div class="main-page-metric-3">
+                        <span></span>
+                    </div>
+                </section>
+                <h1><i class="fa-solid fa-newspaper"></i> Todas as notícias</h1>
+                <section id="all-the-posts">
+                    <div class="post-item">
+                        <article>
+                            <a href="posts/nova-variante-de-covid-como-cientistas-brasileiros.html">
+                                <img src="assets/img/thumb_posts/post1.webp" alt="Imagem ilustrando o vírus." loading="lazy">
+                                <h1>Como cientistas brasileiros detectam nova variante BA.2 no país</h1>
+                            </a>
+                                <span class="cat-saude">Saúde</span>
+                        </article>
+                    </div>
+                    <div class="post-item">
+                        <article>
+                            <a href="posts/como-telegram-pode-deixar-tse-em-sinuca-de-bico-nas-eleicoes.html">
+                                <img src="assets/img/thumb_posts/post2.webp" alt="Imagem mostrando o telegram." loading="lazy">
+                                <span class="cat-politica">Política</span>
+                                <h1>Como Telegram pode deixar TSE em 'sinuca de bico' nas eleições</h1>
+                            </a>
+                        </article>
+                    </div>
+                    <div class="post-item">
+                        <article>
+                            <a href="posts/a_misteriosa-doenca-que-pode-ter-gerado-comportamentos-estranhos-das-bruxas-de-salem.html">
+                                <img src="assets/img/thumb_posts/post3.webp" alt="Imagem ilustrando uma bruxa." loading="lazy">
+                                <h1>A misteriosa doença que pode ter gerado comportamentos estranhos das 'Bruxas de Salém'</h1>
+                            </a>
+                            <span class="cat-mundo">Mundo</span>
+                        </article>
+                    </div>
+                    <div class="post-item">
+                        <article>
+                            <a href="#">
+                                <img src="assets/img/thumb_posts/post4.webp" alt="" loading="lazy">
+                                <h1>A cidade no deserto que luta para não ser engolida pela areia</h1>
+                            </a>
+                            <span class="cat-mundo">Mundo</span>
+                        </article>
+                    </div>
+                    <div class="post-item">
+                        <article>
+                            <a href="#">
+                                <img src="assets/img/thumb_posts/post5.webp" alt="" loading="lazy">
+                                <h1>Por que comunicação em tempo real não é possível entre a Terra e outros planetas</h1>
+                            </a>
+                            <span class="cat-tecnologia">Tecnologia</span>
+                        </article>
+                    </div>
+                    <div class="post-item">
+                        <article>
+                            <a href="#">
+                                <img src="assets/img/thumb_posts/post6.webp" alt="" loading="lazy">
+                            </a>
+                            <h1>Maior apreensão de bitcoins roubados recupera R$ 26 bilhões em criptomoeda</h1>
+                            <span class="cat-tecnologia">Tecnologia</span>
+                        </article>
+                    </div>
+                </section>
+            </div>
         </div>
     </main>
     <footer>
@@ -82,6 +241,6 @@
         </div>
     </footer>
     <script src="assets/js/mobile.js" async></script>
-    <script src="assets/js/pesquisa.js"async></script>
+    <script src="assets/js/funcionalidades.js"async></script>
 </body>
 </html>

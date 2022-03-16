@@ -1,83 +1,253 @@
-html {
-    font-size: 50%;
+@media screen and (max-width: 1030px) {
+  /* 
+    =========================
+        Corpo da Página
+          (Principal)
+      [Google Ads Section]
+    =========================
+    */
+  main #section-googleads-top {
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  main
+    #section-googleads-top
+    :is(.container-googleads-top-2, .container-googleads-top-3) {
+    display: none;
+  }
+  /* 
+    =========================
+        Corpo da Página
+          (Principal)
+      [Posts em Destaques]
+    =========================
+    */
+  main :is(#section-featured-posts, #all-the-posts) {
+    -ms-grid-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  main :is(#section-featured-posts, #all-the-posts) .post-item {
+    height: 250px;
+  }
+  main :is(#section-featured-posts, #all-the-posts) .post-item article h1 {
+    font-size: 1.8rem;
+  }
+  /* 
+    =========================
+        Corpo da Página
+        (Principal)
+    [Seção de métricas]
+    =========================
+    */
+    main #main-page-metrics :is(.main-page-metric-2, .main-page-metric-3) {
+        display: none;
+    }
+  /* Divisor de título */
+  main
+    #main-page-metrics
+    :is(.main-page-metric-1, .main-page-metric-2, .main-page-metric-3)
+    span.page-metrics-divisor::before {
+    content: "";
+    position: absolute;
+    inset: 50% 0 0 -250px;
+    width: 250px;
+    height: 2px;
+    background-color: var(--cor-textos);
+  }
+  main
+    #main-page-metrics
+    :is(.main-page-metric-1, .main-page-metric-2, .main-page-metric-3)
+    span.page-metrics-divisor::after {
+    content: "";
+    position: absolute;
+    inset: 50% 0 0 16px;
+    width: 250px;
+    height: 2px;
+    background-color: var(--cor-textos);
+  }
+  /* Divisores laterais */
+  main #main-page-metrics > span {
+    display: none;
+  }
+  /* Organização das tags de categoria */
+  main #main-page-metrics .main-page-metric-2 {
+    height: auto;
+  }
 }
-/*
-=================
-    Cabeçario
-=================
-*/
-header {
+@media screen and (max-width: 980px) {
+  main :is(#section-featured-posts, #all-the-posts) .post-item {
+    height: 250px;
+  }
+}
+@media screen and (max-width: 830px) {
+  html {
+    font-size: 60%;
+  }
+  /*
+    =================
+        Cabeçario
+    =================
+    */
+  header {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-}
-header .container-menu-mobile.ativo {
+  }
+  header .container-menu-mobile.ativo {
     display: block;
     border-radius: 0 0 10px 10px;
-}
-header .container .menu-section nav,
-header .container .search-button {
+  }
+  header .container .menu-section nav,
+  header .container .search-button {
     display: none;
-}
-header .container .menu-section .menu-mobile {
+  }
+  header .container .menu-section .menu-mobile {
     display: block;
-}
-header .container-menu-mobile {
+  }
+  header .container-menu-mobile {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-}
-/* 
-=========================
-    Rodapé da Página
-=========================
-*/
-footer .footer-first-section {
+  }
+  /* 
+    =========================
+        Corpo da Página
+        (Principal)
+    [Posts em Destaques]
+    =========================
+    */
+  /* main :is(#section-featured-posts, #all-the-posts) .post-item article:hover {
+        animation: none;
+    } */
+  /* 
+    =========================
+        Rodapé da Página
+    =========================
+    */
+  footer .footer-first-section {
     display: flex;
     flex-direction: column-reverse;
     gap: 10px;
     width: 90%;
     align-items: center;
     justify-content: center;
-}
-footer .footer-links {
+  }
+  footer .footer-links {
     flex-wrap: wrap;
-}
-footer dl {
+  }
+  footer dl {
     display: none;
+  }
 }
-/* 
-==============================
-    Configuração de Tela
-           (650px)
-==============================
-*/
+@media screen and (max-width: 768px) {
+  /* 
+    =========================
+        Corpo da Página
+          (Principal)
+      [Posts em Destaques]
+    =========================
+    */
+  main :is(#section-featured-posts, #all-the-posts) .post-item {
+    height: 200px;
+  }
+  main :is(#section-featured-posts, #all-the-posts) .post-item article h1 {
+    font-size: 1.6rem;
+    inset: 55% 0 0 15px;
+  }
+  /* 
+  =========================
+      Rodapé da Página
+  =========================
+  */
+  footer ul li a {
+    text-decoration: none;
+    color: var(--cor-textos);
+    font-size: 2rem;
+  }
+}
 @media screen and (max-width: 650px) {
-/* 
-=========================
-    Corpo da Página
-        (Sobre)
-=========================
-*/
-main .info-sobre-1 {
+  /* 
+    =========================
+        Corpo da Página
+            (Sobre)
+    =========================
+  */
+  main .info-sobre-1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
-
-}
-main .info-sobre-2 {
+  }
+  main .info-sobre-2 {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
     gap: 30px;
-}
-main .info-sobre-1 h2,
-main .info-sobre-2 h2 {
+  }
+  main .info-sobre-1 h2,
+  main .info-sobre-2 h2 {
     text-align: center;
-}
-main .info-sobre-1 p,
-main .info-sobre-2 p {
+  }
+  main .info-sobre-1 p,
+  main .info-sobre-2 p {
     text-align: justify;
+  }
+  /* 
+    =========================
+        Corpo da Página
+          (Principal)
+      [Posts em Destaques]
+    =========================
+    */
+  main :is(#section-featured-posts, #all-the-posts) .post-item article h1 {
+    font-size: 1.6rem;
+  }
 }
+@media screen and (max-width: 600px) {
+  /* 
+    =========================
+        Corpo da Página
+          (Principal)
+      [Posts em Destaques]
+    =========================
+    */
+  main :is(#section-featured-posts, #all-the-posts) {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+  main :is(#section-featured-posts, #all-the-posts) .post-item {
+    height: 250px;
+  }
+  main :is(#section-featured-posts, #all-the-posts) .post-item article h1 {
+    font-size: 2rem;
+  }
+  /* 
+  =========================
+      Corpo da Página
+  (Resultado das Pesquisas)
+  =========================
+  */
+  main .search-result article {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .search-result article > .text-search-result {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 460px) {
+  /* 
+    =========================
+        Corpo da Página
+          (Principal)
+      [Posts em Destaques]
+    =========================
+    */
+  main :is(#section-featured-posts, #all-the-posts) .post-item {
+    height: 250px;
+  }
 }

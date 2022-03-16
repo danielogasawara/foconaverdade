@@ -1,5 +1,9 @@
+<?php
+require_once("../htdocs/assets/connections/conexao.php");
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,6 +17,7 @@
     <!-- CSS da Responsividade -->
     <link rel="stylesheet" media="(max-width: 1030px)" href="assets/css/responsividade.css">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -32,7 +37,7 @@
                     </ul>
                 </nav>
             </div>
-            <button class="search-button" title="Botão para pesquisar.">
+            <button class="search-button" title="botão para pesquisar.">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
         </div>
@@ -50,7 +55,7 @@
                     <li><a href="index.html"><i class="fa-solid fa-house-chimney"></i>Inicio</a></li>
                     <li><a href="sobre.html"><i class="fa-solid fa-circle-info"></i>Sobre</a></li>
                 </ul>
-                <form action="" method="get">
+                <form action="pesquisa.php" method="post">
                     <input type="search" name="buscar" id="search-input-mobile" placeholder="Pesquise aqui...">
                     <input type="submit" value="PESQUISAR">
                 </form>
@@ -58,46 +63,46 @@
         </div>
     </header>
     <main>
-        <div class="container-main-sobre">
-            <div class="box-main-sobre">
-                <h1>Sobre</h1>
-                <div class="info-sobre-1">
-                    <div class="textos-info-sobre">
-                        <h2>Acabando com as suas duvidas</h2>
-                        <p>Sabemos o quão frustrante é receber uma notícia e depois descobrir que tudo não passava de uma mentira ou um golpe. Foi pensando nisso que desenvolvermos uma solução!</p>
-                    </div>
-                    <img src="assets/img/sobreimg1.svg" alt="Ilustração de uma confirmação.">
+        <div class="container-main">
+            <div class="box-main">
+                <div class="container-googleads-top-posts">
+                    <span></span>
                 </div>
-                <div class="info-sobre-2">
-                    <img src="assets/img/sobreimg2.svg" alt="Ilustração de construção de site.">
-                    <div class="textos-info-sobre">
-                        <h2>Tudo com apenas um click</h2>
-                        <p>Criamos um site simples e direto onde em apenas alguns segundos te mantem informado sobre as mensagens e noticias que são divulgadas pela internet.</p>
-                    </div>
-                </div>
-                <div class="info-sobre-3">
-                    <h3>Equipe do Site</h3>
-                    <div class="equipe-sobre">
-                        <ul>
-                            <li>
-                                <img src="assets/img/danielogasawara.webp" alt="Foto do desenvolvedor Daniel." width="100px" height="100px">
-                                <h1>Daniel Ogasawara</h1>
-                                <h2>Programador Web</h2>
-                            </li>
-                            <li>
-                                <img src="assets/img/lucasbalby.webp" alt="Foto do desenvolvedor Lucas." width="100px" height="100px">
-                                <h1>Lucas Balby</h1>
-                                <h2>Programador Web</h2>
-                            </li>
-                            <li>
-                                <img src="assets/img/pedrodhones.webp" alt="Foto do desenvolvedor Pedro." width="100px" height="100px">
-                                <h1>Pedro Dhones</h1>
-                                <h2>Programador Web</h2>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <h1>Resultado da pesquisa</h1>
+                <section class="search-result">
+                    <?php
+                    $pesquisa = $_POST['buscar'];
+                    $sql_code = "SELECT * 
+                                FROM posts 
+                                WHERE titulo LIKE '%$pesquisa%' 
+                                OR descricao LIKE '%$pesquisa%'
+                                OR categoria LIKE '%$pesquisa%'";
+                    $sql_query = $conexao->query($sql_code) or die("ERRO ao consultar! " . $conexao->error);
+
+                    if ($sql_query->num_rows == 0) {
+                    ?>
+                        <p>Nenhum resultado encontrado...</p>
+
+                        <?php
+                    } else {
+                        while ($dados = $sql_query->fetch_assoc()) {
+                        ?>
+                            <article>
+                                <a href="<?php echo $dados['link_do_post']; ?>">
+                                    <img src="<?php echo $dados['thumb']; ?>">
+                                    <div class="text-search-result">
+                                        <h1><?php echo utf8_encode ($dados['titulo']); ?></h1>
+                                        <p><?php echo utf8_encode ($dados['descricao']); ?></p>
+                                </a>
             </div>
+            </article>
+    <?php
+                        }
+                    }
+    ?>
+
+    </section>
+        </div>
         </div>
     </main>
     <footer>
@@ -125,4 +130,5 @@
     <script src="assets/js/mobile.js" async></script>
     <script src="assets/js/funcionalidades.js" async></script>
 </body>
+
 </html>

@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foco na Verdade</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <!-- Icons FontAwesome -->
     <script src="https://kit.fontawesome.com/ea5c489a72.js" crossorigin="anonymous" defer></script>
     <!-- CSS do Site -->
     <link rel="stylesheet" href="assets/css/estilo.css">
     <!-- CSS da Responsividade -->
-    <link rel="stylesheet" media="(max-width: 830px)" href="assets/css/responsividade.css">
+    <link rel="stylesheet" media="(max-width: 1030px)" href="assets/css/responsividade.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <img src="assets/img/logo-temp.png" alt="Logo da Foco na Verdade">
+            <a href="index.html"><img src="assets/img/logo-do-site.svg" alt="" width="40px" loading="lazy"></a>
             <div class="menu-section">
                 <div class="menu-mobile">
                     <div class="botao-menu-mobile">
@@ -37,8 +38,10 @@
         </div>
         <div class="container-searchbar">
             <div class="box-searchbar">
-                <input type="search" name="buscar" id="search-input-pc" placeholder="Pesquique aqui...">
-                <input type="submit" value="PESQUISAR">
+                <form action="pesquisa.php" method="post">
+                    <input type="search" name="buscar" id="search-input-pc" placeholder="Pesquique aqui...">
+                    <input type="submit" value="PESQUISAR">
+                </form>
             </div>
         </div>
         <div class="container-menu-mobile">
@@ -120,6 +123,6 @@
         </div>
     </footer>
     <script src="assets/js/mobile.js" async></script>
-    <script src="assets/js/pesquisa.js" async></script>
+    <script src="assets/js/funcionalidades.js" async></script>
 </body>
 </html>
